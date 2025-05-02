@@ -1,7 +1,3 @@
-Here’s a well-structured `README.md` for your **Resume Generator using Servlets and HTML** project in Eclipse with Apache Tomcat:
-
----
-
 # Resume Generator (Servlet + HTML)
 
 A simple Java web application that allows users to generate and download their resume as a `.txt` file. Built using **Java Servlets**, **HTML5**, **Bootstrap**, and deployed using **Apache Tomcat** in **Eclipse IDE**.
