@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+            padding-top: 50px;
+        }
+        .resume-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-generate {
+            background-color: #4a90e2;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-generate:hover {
+            background-color: #357abd;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 resume-form">
+                <h2 class="text-center mb-4">Resume Generator</h2>
+                <form action="demoServlet" method="POST">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 (123) 456-7890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedinProfile" class="form-label">LinkedIn Profile (Optional)</label>
+                        <input type="url" class="form-control" id="linkedinProfile" name="linkedinProfile" placeholder="https://linkedin.com/in/johndoe">
+                    </div>
+                    <div class="form-group">
+                        <label for="education" class="form-label">Education</label>
+                        <textarea class="form-control" id="education" name="education" rows="3" placeholder="Bachelor's in Computer Science, University Name" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills" class="form-label">Skills (Comma Separated)</label>
+                        <textarea class="form-control" id="skills" name="skills" rows="3" placeholder="Java, Python, SQL" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience" class="form-label">Work Experience</label>
+                        <textarea class="form-control" id="experience" name="experience" rows="4" placeholder="Software Engineer at XYZ Corp, Key achievements" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-generate w-100">Generate & Download Resume</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
